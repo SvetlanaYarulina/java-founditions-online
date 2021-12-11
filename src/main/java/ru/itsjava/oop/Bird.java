@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Birds {
+public class Bird {
     private final String name;
     private boolean isHomey;
 
@@ -23,8 +23,8 @@ public class Birds {
 //
 //    public boolean equals(final Object o) {
 //        if (o == this) return true;
-//        if (!(o instanceof Birds)) return false;
-//        final Birds other = (Birds) o;
+//        if (!(o instanceof Bird)) return false;
+//        final Bird other = (Bird) o;
 //        if (!other.canEqual((Object) this)) return false;
 //        final Object this$name = this.getName();
 //        final Object other$name = other.getName();
@@ -34,7 +34,7 @@ public class Birds {
 //    }
 //
 //    protected boolean canEqual(final Object other) {
-//        return other instanceof Birds;
+//        return other instanceof Bird;
 //    }
 //
 //    public int hashCode() {
@@ -47,10 +47,10 @@ public class Birds {
 //    }
 //
 //    public String toString() {
-//        return "Birds(name=" + this.getName() + ", isHomey=" + this.isHomey() + ")";
+//        return "Bird(name=" + this.getName() + ", isHomey=" + this.isHomey() + ")";
 //    }
 //
-//    public Birds(String name, boolean isHomey) {
+//    public Bird(String name, boolean isHomey) {
 //        this.name = name; // ссылаемся на поле конкретного объекта
 //        this.isHomey = isHomey;
 //    }
@@ -67,16 +67,28 @@ public class Birds {
 //        if (o == null || getClass() != o.getClass()) return false;
 //        // мы проверяем не является ли объект экземпляром другого класса
 //
-//        Birds birds = (Birds) o; // мы явно приводим тип данных (на отвестственности программиста)
+//        Bird bird = (Bird) o; // мы явно приводим тип данных (на отвестственности программиста)
 //
-//        if (isHomey != birds.isHomey) return false; // если не совпадают isHomey, то false
-//        return name.equals(birds.name); // если совпадают isHomey, сравниваем поле name (класс String)
+//        if (isHomey != bird.isHomey) return false; // если не совпадают isHomey, то false
+//        return name.equals(bird.name); // если совпадают isHomey, сравниваем поле name (класс String)
 //        /// через метод equals. Метод equals переопредеден в классе String
+    //Провалились в equals:
+    //public boolean equals(Object anObject) {
+    //if (this == anObject) { если ссылаемся на поле одного и того же объекта, то true
+    //return true;
+    //}
+    //if (anObject instanceof String) {
+    //Оператор instanceof нужен, чтобы проверить, был ли объект, создан на основе класса String, если да то:
+    //String aString = (String)anObject;
+    //if (coder() == aString.coder()) {
+    //сравниваем формат кодирования и сравниваем символ за символом
+    //return isLatin1() ? StringLatin1.equals(value, aString.value) : StringUTF16.equals(value, aString.value);
+    //value Используется для хранения символов
 //    }
 //
 //    @Override
 //    public int hashCode() {
-//        return name.hashCode(); //хэш  код name
-//    }
+//        return name.hashCode(); // стандартный хеш-код из класса String
+////    }
 }
 

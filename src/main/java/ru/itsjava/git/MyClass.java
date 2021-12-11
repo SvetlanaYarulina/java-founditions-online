@@ -1,2 +1,5 @@
-package ru.itsjava.git;public class MyClass {
+package ru.itsjava.git;
+
+public class MyClass {
+
 }

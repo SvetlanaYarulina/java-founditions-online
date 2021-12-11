@@ -9,12 +9,12 @@ public class OOOPractice {
         Telephone phone2 = new Iphone();
         System.out.println("phone2.toString() = " + phone2.toString());
 
-        Birds birds = new Parrots();
+        Bird bird = new Parrots();
 
-        System.out.println("birds.toString() = " + birds.toString());
+        System.out.println("bird.toString() = " + bird.toString());
 
-        Birds birds2 = new Ravens();
-        System.out.println("birds2.toString() = " + birds2.toString());
+        Bird bird2 = new Ravens();
+        System.out.println("bird2.toString() = " + bird2.toString());
 
         Films film = new Comedy();
         System.out.println("film.toString() = " + film.toString());

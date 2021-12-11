@@ -24,9 +24,6 @@ public class Person {
     }
 
     public boolean takeBeer() {
-        if (age >= 18) {
-            return true;
-        }
-        return false;
+        return age >= 18;
     }
 }

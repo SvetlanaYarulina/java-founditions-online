@@ -24,10 +24,10 @@ public class ObjectPractice {
         System.out.println("kate.equals(kate2) = " + kate.equals(kate2));
         System.out.println("kate.equals(murka) = " + kate.equals(murka));
 
-        Birds parrot = new Birds("Попугай", true);
-        Birds parrot2 = new Birds("Попугай", true);
+        Bird parrot = new Bird("Попугай", true);
+        Bird parrot2 = new Bird("Попугай", true);
 
-        Birds raven = new Birds("Ворона", false);
+        Bird raven = new Bird("Ворона", false);
 
         System.out.println("parrot.equals(raven) = " + parrot.equals(raven));
         System.out.println("parrot.equals(parrot2) = " + parrot.equals(parrot2));
