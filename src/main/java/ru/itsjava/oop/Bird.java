@@ -45,10 +45,10 @@ public class Bird {
 //        result = result * PRIME + (this.isHomey() ? 79 : 97);
 //        return result;
 //    }
-//
-//    public String toString() {
-//        return "Bird(name=" + this.getName() + ", isHomey=" + this.isHomey() + ")";
-//    }
+    @Override
+    public String toString() {
+        return "Bird(name=" + this.getName() + ", isHomey=" + this.isHomey() + ")";
+    }
 //
 //    public Bird(String name, boolean isHomey) {
 //        this.name = name; // ссылаемся на поле конкретного объекта
