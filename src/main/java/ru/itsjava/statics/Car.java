@@ -10,14 +10,10 @@ public class Car {
     private String color;
     private final  static double PRICE = 5000000.0;
 
-    public Car(String brand, String color, double PRICE) {
-        this.brand = brand;
-        this.color = color;
-
-    }
 
     public double getPrice() {
-        return this.PRICE;
+
+        return PRICE;
     }
     public String toString(){
         return  "{ brand:" + brand + " color:" + color + " price:" + PRICE + "}";

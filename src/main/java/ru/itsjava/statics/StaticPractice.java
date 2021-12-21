@@ -15,8 +15,8 @@ public class StaticPractice {
 
         System.out.println("Salary.CEO = " + Salary.CEO);
 
-        Car car = new Car("Bentley", "red" , 5000000.0);
-        Car car1 = new Car("Жигули","yellow", 300000.0);
+        Car car = new Car("Bentley", "red");
+        Car car1 = new Car("Жигули","yellow");
         System.out.println("car.getPrice() = " + car.getPrice());
         System.out.println("car1.getPrice() = " + car1.getPrice());
 
