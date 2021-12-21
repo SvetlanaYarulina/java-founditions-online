@@ -14,7 +14,7 @@ public class PersonTest {
     public static final String DEFAULT_NAME = "Svetlana";
     public static final int DEFAULT_AGE = 35;
     public static final String NEW_NAME = "Kira";
-    public static final int NEW_AGE = 17;
+    public static final int NEW_AGE = 19;
 
     @DisplayName("корректно создаваться конструктором")
     @Test
@@ -30,10 +30,9 @@ public class PersonTest {
 
     }
 
-
     @DisplayName("Корректно меняет имя")
     @Test
-    public void shouldHaveCorrectSetter() {
+    public void shouldHaveCorrectSetterName() {
         Person actualPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
 
         actualPerson.setName(NEW_NAME);
@@ -42,8 +41,7 @@ public class PersonTest {
 
     @DisplayName("Корректно меняет возраст")
     @Test
-
-    public void shouldHaveCorrectSetter2() {
+    public void shouldHaveCorrectSetterAge() {
         Person actualPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
 
         actualPerson.setAge(NEW_AGE);
@@ -56,6 +54,11 @@ public class PersonTest {
         Person actualPerson = new Person(DEFAULT_NAME, NEW_AGE);
         actualPerson.birthday();
 
+    }
+    @DisplayName("Проверять можно ли продавать пиво")
+    @Test
+    public void shouldHaveCorrectTakeBeer() {
+        Person actualPerson = new Person(DEFAULT_NAME, NEW_AGE);
         Assertions.assertTrue(actualPerson.takeBeer());
 
     }
