@@ -26,7 +26,7 @@ public class PersonTest {
 //        Assertions.assertEquals(DEFAULT_AGE, actualPerson.getAge());
 
         Assertions.assertAll("actualPerson", () -> assertEquals(DEFAULT_NAME, actualPerson.getName()),
-                () -> assertEquals(DEFAULT_AGE,actualPerson.getAge()));
+                () -> assertEquals(DEFAULT_AGE, actualPerson.getAge()));
 
     }
 
@@ -53,8 +53,10 @@ public class PersonTest {
     public void shouldHaveCorrectAddYear() {
         Person actualPerson = new Person(DEFAULT_NAME, NEW_AGE);
         actualPerson.birthday();
+        Assertions.assertEquals(NEW_AGE, actualPerson.getAge());
 
     }
+
     @DisplayName("Проверять можно ли продавать пиво")
     @Test
     public void shouldHaveCorrectTakeBeer() {
