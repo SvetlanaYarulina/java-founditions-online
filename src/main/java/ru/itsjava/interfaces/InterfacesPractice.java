@@ -48,6 +48,11 @@ public class InterfacesPractice {
         System.out.println("Максимальная дистанция бега: " + fish.maxRunDistance());
         fish.fly();
 
+        khotabich.canYouCreatWish();
+        badGin.canYouCreatWish();
+
+
+
 
 
 

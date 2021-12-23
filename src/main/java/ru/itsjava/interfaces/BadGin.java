@@ -7,4 +7,15 @@ public class BadGin implements Creatable{
     public void creatWish() {
         System.out.println("Плохо исполнил желание");
     }
+
+
+    @Override
+    public void canYouCreatWish() {
+        System.out.println("Я не исполняю твоих желаний");
+    }
+
+    @Override
+    public void canYouCreateWish() {
+
+    }
 }

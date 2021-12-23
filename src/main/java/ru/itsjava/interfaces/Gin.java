@@ -6,4 +6,9 @@ public class Gin implements Creatable {
     public void creatWish() {
         System.out.println("Слушаюсь и повинуюсь!");
     }
+
+    @Override
+    public void canYouCreateWish() {
+
+    }
 }

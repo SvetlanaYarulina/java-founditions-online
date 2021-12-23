@@ -5,6 +5,6 @@ import lombok.Data;
 
 
 @AllArgsConstructor
-public class Figure {
+public abstract class Figure {
 
 }
