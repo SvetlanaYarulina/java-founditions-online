@@ -15,10 +15,6 @@ public class CloneablePractice {
         System.out.println("person4 = " + person4);
         System.out.println("person = " + person);
 
-//        Person person1 = new Person("Светлана", "Ярулина", 35);
-//        Person person2 = new Person("Кира", "Ярулина", 11);
-//        Person person2 = (Person) person.clone();
-//        System.out.println("person2 = " + person2);
     }
 
 }

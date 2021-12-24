@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.Arrays;
 @Data
 @AllArgsConstructor
-public class Main implements Cloneable{
+public class Main{
     private String name;
     String age;
     String surname;

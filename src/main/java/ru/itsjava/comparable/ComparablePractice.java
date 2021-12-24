@@ -18,9 +18,10 @@ public class ComparablePractice {
 
 
 
-        Person person1 = new Person("Светлана", "Ярулина", 35);
-        Person person2 = new Person("Кира", "Ярулина", 11);
+        Person person1 = new Person("Yarulina", "Svetlana", 27);
+        Person person2 = new Person("Yarulina", "Kira", 15);
 
         System.out.println("person1.compareTo(person2) = " + person1.compareTo(person2));
+
     }
 }
