@@ -11,6 +11,7 @@ public class Main{
     String age;
     String surname;
 
+
     public static void main(String[] args) {
 
         Person person1 = new Person("Светлана", "Ярулина", 35);
@@ -22,18 +23,11 @@ public class Main{
         Arrays.sort(persons);    //сортировка по возрасту
         System.out.println("Arrays.toString(persons) = " + Arrays.toString(persons));
 
+        System.out.println("persons.clone(person1) = " + persons.clone());
 
 
     }
 
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-    @Override
-    public String toString() {
 
-        return "Person{" + name + ", " + surname + " ," + age + "}";
-    }
 
 }
