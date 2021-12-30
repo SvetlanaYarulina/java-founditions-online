@@ -7,7 +7,7 @@ public class Man implements Walkable, Swimable, Runnable, Flyable {
     private String flyMaxDistance;
 
 
-    public Man(double maxSwimSpeed, int maxRunDistance) {
+    public Man(double maxSwimSpeed, int maxRunDistance, String flyMaxDistance) {
         this.maxSwimSpeed = maxSwimSpeed;
         this.maxRunDistance = maxRunDistance;
         this.flyMaxDistance = flyMaxDistance();
@@ -49,6 +49,6 @@ public class Man implements Walkable, Swimable, Runnable, Flyable {
 
     @Override
     public String flyMaxDistance() {
-        return null;
+        return ("Дистанция 8,7");
     }
 }
