@@ -14,7 +14,7 @@ public class PersonTest {
     public static final String DEFAULT_NAME = "Svetlana";
     public static final int DEFAULT_AGE = 35;
     public static final String NEW_NAME = "Kira";
-    public static final int NEW_AGE = 19;
+    public static final int NEW_AGE = 17;
 
     @DisplayName("корректно создаваться конструктором")
     @Test
@@ -53,14 +53,14 @@ public class PersonTest {
     public void shouldHaveCorrectAddYear() {
         Person actualPerson = new Person(DEFAULT_NAME, NEW_AGE);
         actualPerson.birthday();
-        Assertions.assertEquals(NEW_AGE, actualPerson.getAge());
+        Assertions.assertEquals(NEW_AGE + 1, actualPerson.getAge());
 
     }
 
     @DisplayName("Проверять можно ли продавать пиво")
     @Test
     public void shouldHaveCorrectTakeBeer() {
-        Person actualPerson = new Person(DEFAULT_NAME, NEW_AGE);
+        Person actualPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
         Assertions.assertTrue(actualPerson.takeBeer());
 
     }
