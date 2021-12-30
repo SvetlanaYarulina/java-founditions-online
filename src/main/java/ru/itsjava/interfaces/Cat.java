@@ -5,7 +5,7 @@ public class Cat implements Walkable, Swimable, Runnable, Flyable{
     private int maxRunDistance;
     private String flyMaxDistance;
 
-    public Cat(double maxSwimSpeed, int maxRunDistance) {
+    public Cat(double maxSwimSpeed, int maxRunDistance,String flyMaxDistance){
         this.maxSwimSpeed = maxSwimSpeed;
         this.maxRunDistance = maxRunDistance;
         this.flyMaxDistance = flyMaxDistance();
@@ -20,7 +20,7 @@ public class Cat implements Walkable, Swimable, Runnable, Flyable{
 
     @Override
     public String flyMaxDistance() {
-        return null;
+        return "Дистанция 3,0";
     }
 
     @Override

@@ -5,7 +5,7 @@ public class Bird implements Walkable, Swimable, Runnable, Flyable {
     private int maxRunDistance;
     private String flyMaxDistance;
 
-    public Bird(double maxSwimSpeed, int maxRunDistance) {
+    public Bird(double maxSwimSpeed, int maxRunDistance, String flyMaxDistance) {
         this.maxSwimSpeed = maxSwimSpeed;
         this.maxRunDistance = maxRunDistance;
         this.flyMaxDistance = flyMaxDistance();
@@ -18,7 +18,7 @@ public class Bird implements Walkable, Swimable, Runnable, Flyable {
 
     @Override
     public String flyMaxDistance() {
-        return null;
+        return "Дистанция 10,1";
     }
 
     @Override

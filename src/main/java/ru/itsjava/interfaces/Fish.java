@@ -5,7 +5,7 @@ public class Fish implements Walkable, Swimable, Runnable, Flyable {
     private int maxRunDistance;
     private String flyMaxDistance;
 
-    public Fish(double maxSwimSpeed, int maxRunDistance) {
+    public Fish(double maxSwimSpeed, int maxRunDistance, String flyMaxDistance) {
         this.maxSwimSpeed = maxSwimSpeed;
         this.maxRunDistance = maxRunDistance;
         this.flyMaxDistance = flyMaxDistance();
