@@ -43,7 +43,7 @@ public class ExceptionsPractice {
 
         Person person = new Person();
         try {
-            person.setAge(0);
+            System.out.println("person.setAge(0) = " + person.setAge(0));
         } catch (AgeNotValidException e){
             e.printStackTrace();
         }
