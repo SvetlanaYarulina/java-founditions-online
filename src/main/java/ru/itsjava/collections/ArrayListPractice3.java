@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayListPractice3 {
+
     public static void main(String[] args) {
         List<Book> booksList = new ArrayList<>();
         List<Book> booksList1 = new ArrayList<>(20);
@@ -103,7 +104,7 @@ public class ArrayListPractice3 {
           //Book{"Java. Эффективное программирование", "Блох Дж.", 219};]
         System.out.print("List: " + "[");
         for (Book elemBook : booksList2) {
-            System.out.print(elemBook + ";"); //Не понимаю как поставить туда фигурные скобки
+            System.out.print(elemBook + ";");
         }
         System.out.println(booksList2);
         }
