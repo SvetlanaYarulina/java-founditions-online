@@ -1,13 +1,15 @@
-package ru.itsjava.collections;//package ru.itsjava.collections.lists;
+package ru.itsjava.collections;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayListPractice3 {
-
     public static void main(String[] args) {
-        List<Book> booksList = new ArrayList<>();
-        List<Book> booksList1 = new ArrayList<>(20);
+
+        java.util.List<Book> booksList = new ArrayList<>();
+
+        System.out.println("Создать список, размером 20");
+        java.util.List<Book> booksList1 = new ArrayList<>(20);
 
         Book book1 = new Book("Гарри Поттер", "Роуллинг", 235);
         Book book2 = new Book("Зеленая миля", "Кинг", 448);
@@ -29,6 +31,7 @@ public class ArrayListPractice3 {
         Book book18 = new Book("Зулейха_открывает_глаза", "Яхина", 512);
         Book book19 = new Book("Мемуары_гейши", "Голден", 512);
 
+
         booksList1.add(book1);
         booksList1.add(book2);
         booksList1.add(book3);
@@ -49,7 +52,6 @@ public class ArrayListPractice3 {
         booksList1.add(book18);
         booksList1.add(book19);
 
-
         for (Book elemBook : booksList1) {
             System.out.println(elemBook);
         }
@@ -62,13 +64,9 @@ public class ArrayListPractice3 {
         }
         System.out.println();
 
-        //а). Получить первый элемент по индексу(первую книгу в списке)
-        System.out.println("booksList1.get(0) = " + booksList1.get(0));
-        System.out.println();
-        //б). Получить последний элемент (последнюю книгу в списке)
-        System.out.println("booksList1.get(booksList1.size() - 1) = " + booksList1.get(booksList1.size() - 1));
 
         //Добавить подряд 5 элементов
+        System.out.println("Добавить подряд 5 элементов");
         Book book20 = new Book("Красная_шапочка", "Перро", 16);
         Book book21 = new Book("Золотой_ключик", "Толстой", 120);
         Book book22 = new Book("Идиот", "Достоевский", 640);
@@ -84,30 +82,142 @@ public class ArrayListPractice3 {
         }
         System.out.println(booksList1);
 
+
         // Добавить шестой элемент в третию позицию. Добавить седьмой элемент в первую позицию.
+        System.out.println("Добавить шестой элемент в третию позицию. Добавить седьмой элемент в первую позицию");
         booksList1.add(2, book6);
         booksList1.add(0, book7);
         System.out.println(booksList1);
 
+
         //Записать в новый список все элементы предыдущего списка
+        System.out.println("Записать в новый список все элементы предыдущего списка.");
         List<Book> booksList2 = new ArrayList<>();
         booksList2.addAll(booksList1);
         System.out.println(booksList2);
 
+
+        //а). Получить первый элемент по индексу(первую книгу в списке)
+        System.out.println("Получить первый элемент по индексу(первую книгу в списке)");
+        System.out.println("booksList1.get(0) = " + booksList1.get(0));
+        System.out.println();
+        //б). Получить последний элемент (последнюю книгу в списке)
+        System.out.println("Получить последнюю книгу в списке");
+        System.out.println("booksList1.get(booksList1.size() - 1) = " + booksList1.get(booksList1.size() - 1));
+
+
+        //Удалить элемент по книге
+        System.out.println("Удалить элемент по книге");
+        booksList1.remove("Идиот");
+        System.out.println(booksList1);
+
+
+        //Удалить элемент по индексу
+        System.out.println("Удалить элемент по индексу");
+        booksList1.remove(2);
+        System.out.println(booksList1);
+
+
         // Проверить наличие элемента
+        System.out.println("Проверить наличие элемента");
         System.out.println("booksList1.contains(book6) = " + booksList1.contains(book6));
         System.out.println("booksList2.contains(\"2666\") = " + booksList2.contains("2666"));
 
 
+        // хаотично в список добавить 4 книги с названием "Java"
+        System.out.println("Хаотично в список добавить 4 книги с названием \"Java\"");
+        Book book = new Book("Java", "Эккель", 1168);
+        booksList2.add(book);
+        booksList2.add(book);
+        booksList2.add(book);
+        booksList2.add(book);
 
-          //Вывести список на экран в формате: List: [ Book{"7 навыков высокоэффективных людей", "Кови", 387};
-          //Book{"Java. Эффективное программирование", "Блох Дж.", 219};]
+
+        // Отфильтровать список вернуть записи по некоторому условию: Индекс делится на 3
+        System.out.println("Индекс делится на 3");
+        int count = 0;
+        for (int i = 0; i < booksList2.size(); i++) {
+            if (i % 3 == 0) {
+                System.out.println(booksList2.get(i));
+            }
+        }
+
+
+        //  Вернуть количество книг, которые равны "Java"
+        System.out.println("Вернуть количество книг, которые равны Джава");
+        for (int i = 0; i < booksList2.size(); i++)
+            if (booksList2.get(i).getName().equals("Java")) {
+                System.out.print(booksList2.get(i));
+            }
+        System.out.println();
+
+
+
+        //Пропустить первые 3 книги в списке
+        System.out.println("Пропустить первые 3 книги в списке");
+        int bookCount = 0;
+        for (int i = 0; i < booksList2.size(); i++) {
+            if ((bookCount < 3) && booksList2.get(i).equals(i)) {
+                bookCount++;
+            } else {
+                System.out.println(booksList2.get(i) + "");
+            }
+            System.out.println();
+        }
+
+
+        // Пропустить первые 2 книги, которые равные "Java"
+        System.out.println("Пропустить первые 2 книги, которые равные \"Java\"");
+        int javaCount = 0;
+        for (int i = 0; i < booksList2.size(); i++) {
+            if ((javaCount < 2) && booksList2.get(i).getName().equals("Java")) {
+                javaCount++;
+            } else {
+                System.out.println(booksList2.get(i) + "");
+            }
+        }
+        System.out.println();
+
+
+        //Возвращаем первую книгу, длина автора которого делится на 3
+        System.out.println("Возвращаем первую книгу, длина автора которого делится на 3");
+        for (int i = 0; i < booksList2.size(); i++) {
+            if (booksList2.get(i).getAuthor().length() % 3 == 0) {
+                System.out.println(booksList2.get(i) + " ");
+                break;
+            }
+        }
+        System.out.println();
+
+
+        //Возвращаем все книги, длина автора которых делится на 3.
+        System.out.println("Возвращаем все книги, длина автора которых делится на 3.");
+        for (int i = 0; i < booksList2.size(); i++) {
+            if (booksList2.get(i).getAuthor().length() % 3 == 0) {
+                System.out.println(booksList2.get(i) + " ");
+            }
+        }
+        System.out.println();
+
+
+        //Вывести список на экран в формате: List: [ Book{"7 навыков высокоэффективных людей", "Кови", 387};
+        //Book{"Java. Эффективное программирование", "Блох Дж.", 219};]
+        System.out.println("Вывести список на экран в формате: List: [ Book{\"7 навыков высокоэффективных людей\", \"Кови\", 387};\n" +
+                "            //Book{\"Java. Эффективное программирование\", \"Блох Дж.\", 219};]");
         System.out.print("List: " + "[");
         for (Book elemBook : booksList2) {
             System.out.print(elemBook + ";");
         }
-        System.out.println(booksList2);
-        }
     }
+}
+
+
+
+
+
+
+
+
+
 
 
