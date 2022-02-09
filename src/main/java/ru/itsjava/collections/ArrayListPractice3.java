@@ -135,7 +135,6 @@ public class ArrayListPractice3 {
 
         // Отфильтровать список вернуть записи по некоторому условию: Индекс делится на 3
         System.out.println("Индекс делится на 3");
-        int count = 0;
         for (int i = 0; i < booksList2.size(); i++) {
             if (i % 3 == 0) {
                 System.out.println(booksList2.get(i));
@@ -145,11 +144,12 @@ public class ArrayListPractice3 {
 
         //  Вернуть количество книг, которые равны "Java"
         System.out.println("Вернуть количество книг, которые равны Джава");
+        int count = 0;
         for (int i = 0; i < booksList2.size(); i++)
             if (booksList2.get(i).getName().equals("Java")) {
-                System.out.print(booksList2.get(i));
+                count++;
             }
-        System.out.println();
+        System.out.println(count);
 
 
 
@@ -162,7 +162,6 @@ public class ArrayListPractice3 {
             } else {
                 System.out.println(booksList2.get(i) + "");
             }
-            System.out.println();
         }
 
 
@@ -176,7 +175,7 @@ public class ArrayListPractice3 {
                 System.out.println(booksList2.get(i) + "");
             }
         }
-        System.out.println();
+
 
 
         //Возвращаем первую книгу, длина автора которого делится на 3
@@ -197,7 +196,6 @@ public class ArrayListPractice3 {
                 System.out.println(booksList2.get(i) + " ");
             }
         }
-        System.out.println();
 
 
         //Вывести список на экран в формате: List: [ Book{"7 навыков высокоэффективных людей", "Кови", 387};
