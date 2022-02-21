@@ -18,8 +18,8 @@ public class MyArrayList {
 
     //проверяем является ли объект пустым или нет
     public boolean isEmpty() {
-        realSize = 0;
-        return false;
+        return realSize == 0;
+
     }
 
     // проверяем наличие объекта в списке
