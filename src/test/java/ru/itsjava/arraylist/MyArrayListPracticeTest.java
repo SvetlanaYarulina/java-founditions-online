@@ -20,31 +20,31 @@ public class MyArrayListPracticeTest {
         }
 
 
-        @DisplayName("корректно добавлять элемент в массив")
+        @DisplayName("корректно добавлять элемент в список")
         @Test
         public void shouldHaveCorrectAddElement() {
             Assertions.assertEquals(true, list.add(DEFAULT_ELEMENT));
-            Assertions.assertEquals(true, list.contains(DEFAULT_ELEMENT));
+            Assertions.assertTrue(list.contains(DEFAULT_ELEMENT));
         }
 
 
-        @DisplayName("корректно проверять, пустой ли массив")
+        @DisplayName("корректно проверять, пустой ли список")
         @Test
         public void shouldHaveCorrectCheckEmptiness() {
             list.add(DEFAULT_ELEMENT);
-            Assertions.assertEquals(false, list.isEmpty());
+            Assertions.assertFalse(list.isEmpty());
         }
 
 
-        @DisplayName("корректно проверять наличие элемента в массиве")
+        @DisplayName("корректно проверять наличие элемента в списке")
         @Test
         public void shouldHaveCorrectCheckHavingObject() {
             list.add(DEFAULT_ELEMENT);
-            Assertions.assertEquals(true, list.contains(DEFAULT_ELEMENT));
+            Assertions.assertTrue(list.contains(DEFAULT_ELEMENT));
         }
 
 
-        @DisplayName("корректно удалять все элементы из массива")
+        @DisplayName("корректно удалять все элементы из списка")
         @Test
         public void shouldHaveCorrectClearList() {
             list.add(DEFAULT_ELEMENT);
@@ -53,16 +53,16 @@ public class MyArrayListPracticeTest {
         }
 
 
-        @DisplayName("корректно удалять элемент из массива")
+        @DisplayName("корректно удалять элемент из списка")
         @Test
         public void shouldHaveCorrectRemoveElement() {
             list.add(DEFAULT_ELEMENT);
-            Assertions.assertEquals(true, list.remove(DEFAULT_ELEMENT));
+            Assertions.assertTrue(list.remove(DEFAULT_ELEMENT));
             Assertions.assertEquals(0, list.size());
         }
 
 
-        @DisplayName("корректно удалять элемент из массива по индексу элемента")
+        @DisplayName("корректно удалять элемент из списка по индексу элемента")
         @Test
         public void shouldHaveCorrectRemoveElementByIndex() {
             list.add(DEFAULT_ELEMENT);
@@ -93,7 +93,7 @@ public class MyArrayListPracticeTest {
         }
 
 
-        @DisplayName("корректно добавлять элемент в массив по индексу")
+        @DisplayName("корректно добавлять элемент в список по индексу")
         @Test
         public void shouldHaveCorrectAddElementByIndex() {
             list.add(DEFAULT_ELEMENT);
