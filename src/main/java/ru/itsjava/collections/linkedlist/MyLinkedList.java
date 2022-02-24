@@ -20,10 +20,8 @@ public class MyLinkedList {
 
 
     public boolean isEmpty() {
-             return head == null;
-            }
-
-
+        return head == null;
+    }
 
 
     public boolean contains(Object o) {
@@ -31,7 +29,7 @@ public class MyLinkedList {
             return true;
         } else {
             Node curNode = head;
-            while (curNode.getNext()  != null) {
+            while (curNode.getNext() != null) {
                 curNode = curNode.getNext();
                 if (curNode.getValue().equals(o)) {
                     return true;
@@ -49,41 +47,17 @@ public class MyLinkedList {
             Node curNode = head;
             while (curNode.getNext() != null) {
                 curNode = curNode.getNext();
-            }curNode.setNext(resNode);
             }
-            return true;
+            curNode.setNext(resNode);
         }
+        return true;
+    }
 
     // СТРОКА1 -> null
     // СТРОКА1 -> СТРОКА2 -> СТРОКА3 -> null
-        public boolean remove (Object o){
-            if (head == null)
-                return false;
+    public boolean remove(Object o) {
 
-            if (head.getValue().equals(o)) {
-                head = head.getNext();
-                return true;
-            }
-
-            if (head.getNext() == null) return false;
-
-            Node curNode = head;
-            Node prevNode = head;     //  prevNode предыдущий узел
-
-            while ((curNode = curNode.getNext()) != null) {
-                if (curNode.getValue().equals(o)) {
-                    break;
-                }
-                prevNode = prevNode.getNext();
-            }
-
-            if (curNode == null) return false;
-
-            prevNode.setNext(curNode.getNext());
-            curNode.setNext(null);
-            return true;
-        }
-
+    }
 
         public void clear () {
             Node prevNode = head; //присваеваем переменной предыдущего значения первый элемент
