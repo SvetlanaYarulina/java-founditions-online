@@ -56,13 +56,39 @@ public class MyLinkedList {
     // СТРОКА1 -> null
     // СТРОКА1 -> СТРОКА2 -> СТРОКА3 -> null
     public boolean remove(Object o) {
-        return false;
+        if (head == null) return false; // проверяем , если head равен null, то false
+
+        if (head.getValue().equals(o)) { // проверяем, если head не null и может совпадать с удаляемым элементом
+            head = head.getNext(); // присваиваем следующий элемент
+            return true;
+        }
+
+        if (head.getNext() == null) return false; // проверяем , если следующий элемент не null
+
+        Node curNode = head; //присваеваем переменной предыдущего значения первый элемент
+        Node prevNode = head; //присваеваем переменной текущего значения первый элемент
+
+        while ((curNode = curNode.getNext()) != null) { // пробегаемся по листу
+            // сначала оба равны head, при первой итерации curNode переходит в следущий элемент
+            if (curNode.getValue().equals(o)) { // проверим, если мы попали на curNode,
+                // если curNode.getValue совпал с объектом, то
+                break; // выход из цикла
+            }
+            prevNode = prevNode.getNext(); // иначе перемещаем prevNode
+        }
+
+        if (curNode == null) return false; // если мы прбежались до конца списка и не нашли элемент,
+        // проверим, есть ли элемент в коце списка
+
+        prevNode.setNext(curNode.getNext());
+        curNode.setNext(null);
+        return true;
     }
+
 
     public void clear() {
         Node prevNode = head; //присваеваем переменной предыдущего значения первый элемент
         Node curNode = head; //присваеваем переменной текущего значения первый элемент
-
 
         while ((curNode = curNode.getNext()) != null) { //пробегаемся по листу
             prevNode.setValue(null);
@@ -107,8 +133,27 @@ public class MyLinkedList {
 
 
     public void add(int index, Object element) {
-
+        checkIndex(index);
+        Node resNode = new Node(element, null);
+        Node curNode = head;// присваиваем переменной значение нулевого узла
+        Node nextNode = head.getNext();// присваиваем переменной узел, следующий за нулевым
+        for (int i = 0; i <= index; i++) {//пробегаемся по листу
+            if (i == 0) { // если индекс равен 0, создаем новый узел
+                head = resNode;
+                resNode.setNext(curNode);
+                break;
+            } else {
+                if (i == index) {// если нашли искомый узел по индексу
+                    curNode.setNext(resNode);
+                    resNode.setNext(nextNode);
+                    break;
+                }
+            }
+            curNode = curNode.getNext();//присваиваем переменной следующий узел
+            nextNode = nextNode.getNext();//присваиваем переменной следующий узел
+        }
     }
+
 
     public Object remove(int index) {
         checkIndex(index); // проверяем корректность индекса
@@ -160,12 +205,46 @@ public class MyLinkedList {
         return false;
     }
 
+    // Если элемент присутствует, то возвращается индекс первого вхождения элемента,
+// в противном случае возвращается -1, если список не содержит элемент.
     public int indexOf(Object o) {
-        return 0;
+        int count = 0;
+        int index = 0;
+        Node curNode = head;
+        while (curNode.getNext() != null) {
+            if (curNode.getValue().equals(o)) {
+                index = count;
+                break;
+            }
+            curNode = curNode.getNext();
+            count++;
+        }
+        if (curNode.getNext() == null) {
+            if (curNode.getValue().equals(o)) {
+                index = (size() - 1);
+            }
+            return index;
+        }
+        return -1;
     }
 
     public int lastIndexOf(Object o) {
-        return 0;
+        int count = 0;
+        int index = 0;
+        Node curNode = head;
+        while (curNode.getNext() != null) {
+            if (curNode.getValue().equals(o)) {
+                index = count;
+            }
+            curNode = curNode.getNext();
+            count--;
+        }
+        if (curNode.getNext() == null) {
+            if (curNode.getValue().equals(o)) {
+                index = (size() - 1);
+            }
+        }
+        return index;
     }
 
 
