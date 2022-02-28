@@ -1,4 +1,4 @@
-package ru.itsjava.collections;
+package ru.itsjava.collections.arraylist;
 
 public class List<T> {
     public List(int i) {

@@ -1,13 +1,12 @@
-package ru.itsjava.collections;
+package ru.itsjava.collections.sets;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Person {
+public class Fruit {
     private final String name;
-    private int age;
-    private boolean isMale;
+    private int weight;
 
 }

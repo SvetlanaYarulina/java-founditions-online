@@ -1,4 +1,4 @@
-package ru.itsjava.collections;//package ru.itsjava.collections.lists;
+package ru.itsjava.collections.arraylist;//package ru.itsjava.collections.lists;
 
 import java.util.ArrayList;
 import java.util.List;
