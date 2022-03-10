@@ -50,14 +50,21 @@ public class MapPractice {
         Man kolpakov = new Man("Колпаков");
         Man udin = new Man("Юдин");
 
+        Map<Man, Fruit> fruitMap = new HashMap<>();
         man.put(yarulin, "банан");
         man.put(pashov, "клубника");
-        man.put(petrov, "персик");
         man.put(kolpakov, "апельсин");
         man.put(udin, "груша");
 
 
         System.out.println("------------");
+
+
+        System.out.println("В новый экземпляр HashMap добавим старую карту");
+        Map<Man, String> man2 = new HashMap<>();
+        man2.putAll(man);
+
+
 
         System.out.println("man.get(kolpakov) = " + man.get(kolpakov)); // получить фрукт по покупателю
 
@@ -79,7 +86,7 @@ public class MapPractice {
         for (Map.Entry<Man, String> pair : man.entrySet()) {
             System.out.println(pair.getKey() + ": " + pair.getValue());
         }
-        //В новый экземпляр HashMap добавим старую карту???
+
 
 
     }
