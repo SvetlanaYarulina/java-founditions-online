@@ -1,4 +1,4 @@
-package ru.itsjava.oop;
+package ru.itsjava.oop.inharitance;
 
 public class OOOPractice {
     public static void main(String[] args) {
