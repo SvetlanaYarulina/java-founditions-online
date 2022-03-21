@@ -3,7 +3,7 @@ package ru.itsjava.collections.lists;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.itsjava.oop.Bird;
+import ru.itsjava.oop.inharitance.Bird;
 @DisplayName("Класс Birds должен: ")
 public class BirdsTest {
 
