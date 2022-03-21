@@ -4,6 +4,7 @@ package ru.itsjava.oop;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.itsjava.oop.inharitance.Person;
 
 import static org.junit.jupiter.api.Assertions.*;
 
