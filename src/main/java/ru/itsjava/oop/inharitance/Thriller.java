@@ -1,4 +1,4 @@
-package ru.itsjava.oop;
+package ru.itsjava.oop.inharitance;
 
 public class Thriller extends Films {
     public Thriller(){
