@@ -1,6 +1,6 @@
 package ru.itsjava.object;
 
-import ru.itsjava.oop.*;
+import ru.itsjava.oop.inharitance.Bird;
 
 public class ObjectPractice {
     public static void main(String[] args) {
