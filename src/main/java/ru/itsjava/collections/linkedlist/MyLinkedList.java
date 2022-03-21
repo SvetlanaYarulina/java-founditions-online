@@ -25,9 +25,7 @@ public class MyLinkedList {
 
 
     public boolean contains(Object o) {
-        if (head == o) {
-            return true;
-        } else {
+        if (head.getValue().equals(o)) return true;
             Node curNode = head;
             while (curNode.getNext() != null) {
                 curNode = curNode.getNext();
@@ -35,7 +33,6 @@ public class MyLinkedList {
                     return true;
                 }
             }
-        }
         return false;
     }
 
